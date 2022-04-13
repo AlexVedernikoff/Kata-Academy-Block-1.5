@@ -1,0 +1,217 @@
+@font-face {
+        font-family: 'TT Lakes';
+        src: url('Assets/Fonts/TTLakes/TTLakes-Regular.ttf');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+        font-family: 'TT Lakes';
+        src: url('Assets/Fonts/TTLakes/TTLakes-DemiBold.ttf');
+        font-weight: bold;
+        font-style: normal;
+}
+
+body {
+	font-family: 'TT Lakes';
+	background: #f7f7f7;
+	margin-right: 0px;
+	
+}
+
+.trademarks {
+	height: auto;
+}
+
+.trademarks__wrapper {
+	margin: 0 auto;
+	min-width: 320px;
+	max-width: 1120px;
+}
+
+@media all and (max-width: 767px) {
+	.trademarks__wrapper {
+		padding: 0 0 0 15px !important; 
+	}
+}
+
+@media all and (min-width: 768px) {
+	.trademarks__wrapper {
+		padding: 0 0 0 40px; 
+	}
+}
+
+.swiper-wrapper {
+	padding: 0 0 0 15px; 
+}
+
+.swiper {
+	overflow: visible !important;
+}
+
+/*----Стили Хедера---------------------------------------------------------------------------------------*/
+
+.trademarks__header {
+	min-height: 70px;
+	background: linear-gradient(to right, #f8f8f8, #ffffff);
+}
+
+.trademarks__header h1 {
+	display: inline-block;
+	opacity: 0.6;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+.trademarks__main {
+	padding: 20px 0 0 0;	
+}
+
+@media all and (min-width: 768px) {
+	.trademarks__main {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		max-height: 170px;	
+		overflow: hidden;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.swiper {
+  		height: 70px;
+	}
+
+	.swiper-slide {
+		min-width: 240px;
+		height: 70px;
+	}	
+}
+
+
+.swiper-pagination-bullet {
+	--swiper-pagination-bullet-inactive-color: #dcdcdc;
+	--swiper-pagination-bullet-inactive-opacity: 1;
+	height: 12px !important;
+	width:  12px !important;
+}
+
+.swiper-pagination-bullet-active {
+	--swiper-theme-color: #b4b5bb;
+}
+
+.swiper-pagination {
+		transform: translate3d(0,60px,0) !important;
+		overflow: visible;
+		height: 20px;
+	}
+
+@media all and (min-width: 768px) {
+	.swiper-pagination {
+		display: none;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.trademarks__main_hidden {
+		max-height: 170px;	
+		overflow: hidden;
+		transition: max-height 0.8s ease-in-out; 
+	}
+}
+
+
+.trademarks__main_open {
+    max-height: 1100px;
+    transition: max-height 0.8s ease-in-out;
+}
+
+
+.trademarks__button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.trademarks__button>img {
+	height: 40px;
+}
+
+.trademarks__logo {
+	flex-shrink: 0;
+	width: 240px;
+	height: 70px;
+	border: 2px solid #e9e9e9;
+	border-radius: 5px;
+	background: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 15px 15px 0;
+	padding: 0 15px 0 15px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.trademarks__logo>img {
+	max-height: 45px;
+	max-width: 120px;
+}
+
+
+@media all and (max-width: 767px) {
+	.trademarks__wrapper:nth-child(2)::after {
+		content: "";
+		position: absolute;
+		right: 0px;
+		top: 20px;
+		z-index: 1;
+		width: 50px;
+		height: 70px;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%);
+	}
+}
+
+
+.trademarks__button-read-more {
+	padding: 0;
+ 	border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.trademarks__button-read-more>img {
+	display: inline-block;
+	vertical-align: middle;
+	transform: rotate(0deg);
+	transition-property: transform;
+	transition-duration: 0.8s;
+	transition-timing-function: ease-in-out;
+	opacity: 1;
+}
+
+.trademarks__button-read-more>span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.trademarks__button-read-more_rotated>img {
+	transform: rotate(180deg);
+	transition-property: transform;
+	transition-duration: 0.8s;
+	transition-timing-function: ease-in-out;
+}
+
+@media all and (max-width: 767px) {
+	.trademarks__button-read-more
+	 {
+		display: none;
+	}
+}
