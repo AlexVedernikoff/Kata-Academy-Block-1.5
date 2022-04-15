@@ -18,6 +18,10 @@ body {
 	
 }
 
+html, body {
+	scrollbar-width: none;
+}
+
 .trademarks {
 	height: auto;
 }
@@ -122,12 +126,10 @@ body {
 	}
 }
 
-
 .trademarks__main_open {
-    max-height: 1100px;
+    max-height: 600px;
     transition: max-height 0.8s ease-in-out;
 }
-
 
 .trademarks__button {
   padding: 0;
