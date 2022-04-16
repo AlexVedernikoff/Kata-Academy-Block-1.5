@@ -24,6 +24,9 @@ function swiperInit() {
 	  },
 	  pagination: {
 	    el: '.swiper-pagination',
+	    dynamicBullets: true,
+	    dynamicMainBullets: 9,
+	    clickable: true,
 	  },
 	});
 return(swiper);

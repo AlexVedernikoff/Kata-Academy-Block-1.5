@@ -15,6 +15,7 @@ body {
 	font-family: 'TT Lakes';
 	background: #f7f7f7;
 	margin-right: 0px;
+	margin-left:  0px;
 	
 }
 
@@ -32,6 +33,7 @@ body::-webkit-scrollbar {
 
 .trademarks {
 	height: auto;
+	overflow-y: visible;
 }
 
 .trademarks__wrapper {
@@ -43,6 +45,7 @@ body::-webkit-scrollbar {
 @media all and (max-width: 767px) {
 	.trademarks__wrapper {
 		padding: 0 0 0 15px !important; 
+		box-sizing: border-box;
 	}
 }
 
@@ -57,7 +60,7 @@ body::-webkit-scrollbar {
 }
 
 .swiper {
-	overflow: visible !important;
+	height: 135px;
 }
 
 /*----Стили Хедера---------------------------------------------------------------------------------------*/
@@ -92,10 +95,6 @@ body::-webkit-scrollbar {
 }
 
 @media all and (max-width: 767px) {
-	.swiper {
-  		height: 70px;
-	}
-
 	.swiper-slide {
 		min-width: 240px;
 		height: 70px;
@@ -110,13 +109,24 @@ body::-webkit-scrollbar {
 	width:  12px !important;
 }
 
+/*.swiper-pagination-bullet:nth-child(10) {
+	display: none;
+}*/
+
 .swiper-pagination-bullet-active {
 	--swiper-theme-color: #b4b5bb;
 }
 
+.swiper-pagination-bullet-active-prev {
+	visibility: hidden !important;
+}
+
+.swiper-pagination-bullet-active-next {
+	visibility: hidden !important;	
+}
+
 .swiper-pagination {
-		transform: translate3d(0,60px,0) !important;
-		overflow: visible;
+		overflow: hidden;
 		height: 20px;
 	}
 
@@ -154,7 +164,7 @@ body::-webkit-scrollbar {
 .trademarks__logo {
 	flex-shrink: 0;
 	width: 240px;
-	height: 70px;
+	height: 70px !important;
 	border: 2px solid #e9e9e9;
 	border-radius: 5px;
 	background: #ffffff;
@@ -186,7 +196,6 @@ body::-webkit-scrollbar {
 	}
 }
 
-
 .trademarks__button-read-more {
 	padding: 0;
  	border: none;
@@ -194,7 +203,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
     font-size: 15px;
     font-weight: bold;
-    opacity: 0.6;
+
 }
 
 .trademarks__button-read-more>img {
@@ -210,6 +219,7 @@ body::-webkit-scrollbar {
 .trademarks__button-read-more>span {
 	display: inline-block;
 	vertical-align: middle;
+	opacity: 0.6;
 }
 
 .trademarks__button-read-more_rotated>img {
