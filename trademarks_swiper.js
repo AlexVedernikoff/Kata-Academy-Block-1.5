@@ -5,27 +5,32 @@ let isSviperInit = false;
 
 function swiperInit() {
 	const swiper = new Swiper('.swiper', {
+	  // loop: true,
+	  centeredSlides: true,   
+	  centeredSlidesBounds: true,
+	  watchOverflow: true,
 	  direction: 'horizontal',
-	  slidesPerView: 2,
+	  slidesPerView: 1.1,
 	  spaceBetween: 10,
 	  breakpoints: {
 	    320: {
-	      slidesPerView: 2,
+	      slidesPerView: 1.3,
+	      // slidesPerView: window.screen.width/246,
 	      spaceBetween: 20
 	    },
 	    480: {
-	      slidesPerView: 3,
+	      slidesPerView: 2,
 	      spaceBetween: 30
 	    },
 	    640: {
-	      slidesPerView: 4,
+	      slidesPerView: 2.7,
 	      spaceBetween: 40
 	    }
 	  },
 	  pagination: {
 	    el: '.swiper-pagination',
 	    dynamicBullets: true,
-	    dynamicMainBullets: 9,
+	    dynamicMainBullets: 10,
 	    clickable: true,
 	  },
 	});
@@ -37,6 +42,7 @@ let mobile = window.matchMedia("(min-width: 0px) and (max-width: 767px)");
 function changeClasses () {
  	 	
  	if (mobile.matches) {
+ 		// console.log("ширина экрана " + window.screen.width);
  		// console.log('Ширина экрана меньше или равна 767px');
  		//	Если ширина экрана меньше или равна 767px, 
  		//	подключаем классы для свайпера и инициализиурем свайпер.

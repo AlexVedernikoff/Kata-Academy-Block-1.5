@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
 
 @media all and (max-width: 767px) {
 	.trademarks__wrapper {
-		padding: 0 0 0 15px !important; 
+		padding: 0 0 0 20px !important; 
 		box-sizing: border-box;
 	}
 }
@@ -56,11 +56,12 @@ body::-webkit-scrollbar {
 }
 
 .swiper-wrapper {
-	padding: 0 0 0 15px; 
+	padding: 20px 0 0 0; 
 }
 
 .swiper {
 	height: 135px;
+
 }
 
 /*----Стили Хедера---------------------------------------------------------------------------------------*/
@@ -96,7 +97,6 @@ body::-webkit-scrollbar {
 
 @media all and (max-width: 767px) {
 	.swiper-slide {
-		min-width: 240px;
 		height: 70px;
 	}	
 }
@@ -109,21 +109,19 @@ body::-webkit-scrollbar {
 	width:  12px !important;
 }
 
-/*.swiper-pagination-bullet:nth-child(10) {
-	display: none;
-}*/
+
 
 .swiper-pagination-bullet-active {
 	--swiper-theme-color: #b4b5bb;
 }
 
-.swiper-pagination-bullet-active-prev {
+/*.swiper-pagination-bullet-active-prev {
 	visibility: hidden !important;
 }
 
 .swiper-pagination-bullet-active-next {
 	visibility: hidden !important;	
-}
+}*/
 
 .swiper-pagination {
 		overflow: hidden;
@@ -195,6 +193,20 @@ body::-webkit-scrollbar {
 		background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%);
 	}
 }
+
+@media all and (max-width: 767px) {
+	.trademarks__wrapper:nth-child(2)::before {
+		content: "";
+		position: absolute;
+		left: 0px;
+		top: 20px;
+		z-index: 2;
+		width: 40px;
+		height: 70px;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%);
+	}
+}
+
 
 .trademarks__button-read-more {
 	padding: 0;
